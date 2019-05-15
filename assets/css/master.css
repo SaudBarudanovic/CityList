@@ -10750,9 +10750,33 @@ a.text-dark:hover, a.text-dark:focus {
 .text-holder{
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   height: 92vh;
   padding: 0 2rem;
+  margin: 0;
+}
+.generate-controls{
+  display: flex;
+  margin-bottom: 40px;
+  width: 100%;
+  justify-content: center;
+}
+#generate-button{
+  padding: 0 30px;
+  max-height: 40px;
+}
+.select-container{
+  display: flex;
+  align-items: center;
+}
+.select-container select{
+  padding: 0px 50px 0px 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.select-container label{
+  white-space: nowrap;
   margin: 0;
 }
 nav.navbar{
