@@ -8,9 +8,25 @@
   <link rel="stylesheet" href="assets/css/master.css">
   <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="assets/codemirror/theme/dracula.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+  <div class="loader">
+
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div>
+  <div class="main">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="">CityList</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -276,10 +292,12 @@
       <button type="button" class="btn btn-primary btn-lg" id="generate-button">Generate cities</button>
     </div>
   </div>
+  <script src="cities.json"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="assets/codemirror/lib/codemirror.js" charset="utf-8"></script>
+  <script src="assets/codemirror/lib/codemirror.js"></script>
   <script src="assets/codemirror/mode/xml/xml.js"></script>
-  <script src="assets/js/index.js" charset="utf-8"></script>
+  <script src="assets/js/index.js"></script>
+</div>
 </body>
 
 </html>

@@ -17,13 +17,9 @@ $(document).ready(function() {
         for (i in res) {
           if (res[i].country === countryChoice) {
             var currentCity = res[i].name;
-            var sterilisedValue = currentCity.replace(/\s/g, '').toLowerCase();
-            sterilisedValue = sterilisedValue.replace(/ć/g, 'c');
-            sterilisedValue = sterilisedValue.replace(/č/g, 'c');
-            sterilisedValue = sterilisedValue.replace(/ž/g, 'z');
-            sterilisedValue = sterilisedValue.replace(/đ/g, 'd');
-            sterilisedValue = sterilisedValue.replace(/š/g, 's');
-            var value = '  <option value="' + sterilisedValue + '">' + currentCity + '</option>';
+            var currentLat = res[i].lat;
+            var currentLng = res[i].lng;
+            var value = '  <option aria-lat="' + currentLat + '" aria-lng="' + currentLng + '" value="' + currentCity + '">' + currentCity + '</option>';
             cityArray.push(value)
           }
         }
@@ -35,4 +31,7 @@ $(document).ready(function() {
       }
     });
   });
+  console.log("downloaded");
+  $(".main").css("filter", "none");
+  $(".loader").fadeOut(300);
 });
